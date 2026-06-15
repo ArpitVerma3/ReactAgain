@@ -4,14 +4,18 @@ import AddTask from "./Components/AddTask";
 import AppName from "./Components/AppName";
 import TodoItem1 from "./Components/TodoItem1";
 import TodoItem2 from "./Components/todoItem2";
+import "./App.css";
 
 function App() {
   return (
-    <center class="todo-box">
+    <center className="todo-box">
       <AppName></AppName>
       <AddTask></AddTask>
-      <TodoItem1></TodoItem1>
-      <TodoItem2></TodoItem2>
+      
+      <div className="item-box">
+        <TodoItem1></TodoItem1>
+        <TodoItem2></TodoItem2>
+      </div>
     </center>
   );
 }
