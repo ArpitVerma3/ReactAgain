@@ -1,4 +1,4 @@
-function AddTask(){
+function AddTask({onNewItems}){
     return (
         <div class="container text-center">
         <div class="row row1">
@@ -9,7 +9,9 @@ function AddTask(){
             <input type="date"/>
           </div>
           <div class="col-2">
-            <button type="button" class="btn btn-success btn1">Add</button>
+            <button type="button" class="btn btn-success btn1" 
+            onClick={()=>onNewItems("a", "b")}
+            >Add</button>
           </div>
         </div>
         </div>
