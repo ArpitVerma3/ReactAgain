@@ -18,6 +18,8 @@ function App() {
   const [todoItems, setTodoItems]=useState(initodoItems);
   const onNewItems = (itemName, itemDueDate)=>{
     console.log(`New Item Added : " ${itemName} Date : ${itemDueDate}`);
+    const newItems=[...todoItems, {name:itemName, dueDate:itemDueDate}];
+    setTodoItems(newItems);
   }
 
   return (
