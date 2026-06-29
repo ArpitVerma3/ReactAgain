@@ -1,11 +1,11 @@
 function TodoItem1({todoName, todoDate}) {
   return (
-    <div class="container">
-      <div class="row row1">
-        <div class="col-6">{todoName}</div>
-        <div class="col-4">{todoDate}</div>
-        <div class="col-2">
-          <button type="button" class="btn btn-danger btn1">
+    <div className="container">
+      <div className="row row1">
+        <div className="col-6">{todoName}</div>
+        <div className="col-4">{todoDate}</div>
+        <div className="col-2">
+          <button type="button" className="btn btn-danger btn1">
             Delete
           </button>
         </div>
