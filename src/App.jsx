@@ -6,20 +6,23 @@ import { useState } from "react";
 import WlcmMsg from "./Components/wlcmMsg";
 
 function App() {
-
-  const [todoItems, setTodoItems]=useState([]);
-  const onNewItems = (itemName, itemDueDate)=>{
+  const [todoItems, setTodoItems] = useState([]);
+  const onNewItems = (itemName, itemDueDate) => {
     console.log(`New Item Added : " ${itemName} Date : ${itemDueDate}`);
-    const newItems=[...todoItems, {name:itemName, dueDate:itemDueDate}];
+    const newItems = [...todoItems, { name: itemName, dueDate: itemDueDate }];
     setTodoItems(newItems);
-  }
+  };
 
+  const DeleteItem=(todoItemName)=>{
+    console.log(`Item Deleted : ${todoItemName}`);
+  };
+  
   return (
     <center className="todo-box">
       <AppName></AppName>
       {todoItems.length === 0 && <WlcmMsg />}
       <AddTask onNewItems={onNewItems}></AddTask>
-      <TodoItems todoItems={todoItems} />
+      <TodoItems todoItems={todoItems} onDeleteClk={DeleteItem} />
     </center>
   );
 }
