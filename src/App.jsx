@@ -8,15 +8,15 @@ import WlcmMsg from "./Components/wlcmMsg";
 function App() {
   const [todoItems, setTodoItems] = useState([]);
   const onNewItems = (itemName, itemDueDate) => {
-    console.log(`New Item Added : " ${itemName} Date : ${itemDueDate}`);
     const newItems = [...todoItems, { name: itemName, dueDate: itemDueDate }];
     setTodoItems(newItems);
   };
 
-  const DeleteItem=(todoItemName)=>{
-    console.log(`Item Deleted : ${todoItemName}`);
+  const DeleteItem = (todoItemName) => {
+    const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
+    setTodoItems(newTodoItems);
   };
-  
+
   return (
     <center className="todo-box">
       <AppName></AppName>
